@@ -1,105 +1,165 @@
-## Pet Shop Scheduling
+Pet Shop Scheduling System
+A comprehensive appointment scheduling system for pet shops and veterinary clinics built with plain PHP and MySQL. This system streamlines daily operations and enhances client service management.
 
+https://img.shields.io/badge/PHP-7.4+-777BB4?style=for-the-badge&logo=php&logoColor=white
+https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white
+https://img.shields.io/badge/Project-Stable-brightgreen?style=for-the-badge
 
-System for scheduling appointments for a Pet Shop / veterinary clinic, developed in plain PHP with MySQL. Designed to streamline daily operations and improve client service.
+##  Features
 
+Secure Authentication System - Login/logout with session management
 
+Complete Client Management - CRUD operations for client records
 
-### Environment & Tools
-[![XAMPP](https://img.shields.io/badge/XAMPP-FB7A24?style=flat&logo=xampp&logoColor=white)](https://www.apachefriends.org/)
-[![phpMyAdmin](https://img.shields.io/badge/phpMyAdmin-6C78AF?style=flat&logo=phpmyadmin&logoColor=white)](https://www.phpmyadmin.net/)
+Pet Management - Track pets with client associations
 
-### Project Status
-![Project](https://img.shields.io/badge/Project-Stable-brightgreen)
-![PHP Version](https://img.shields.io/badge/PHP-7.4+-777BB4)
+Appointment Scheduling - Book, view, and manage appointments with service types
 
+Daily Dashboard - Overview of today's appointments at a glance
 
-
-
-
-Functionalities
-
-- Basic authentication (login/logout)
-- Client CRUD
-- Pet CRUD (each pet is linked to a client)
-- Appointment CRUD (date, time, service type)
-- Daily dashboard showing today's appointments
-- Security: prepared statements, CSRF tokens, output escaping (htmlspecialchars)
+Security First - Prepared statements, CSRF protection, and output escaping
 
 Project Structure
+````
+pet-shop-scheduling/
+├── index.php              # Home dashboard (requires login)
+├── login.php              # User authentication
+├── logout.php             # Session termination
+├── clientes.php           # Client management
+├── pets.php               # Pet management
+├── agendamentos.php       # Appointment scheduling
+├── dashboard.php          # Today's appointments view
+├── db/
+│   ├── conexao.php        # Database connection handler
+│   └── criar_tabelas.sql  # Database schema
+├── helpers/
+│   ├── auth.php           # Authentication utilities
+│   ├── csrf.php           # CSRF protection
+│   └── flash.php          # Flash message system
+└── scripts/
+    ├── create_db.php      # Database setup utility
+    ├── reset_admin_password.php
+    ├── run_smoke_suite.php
+    └── setup-dev.ps1
 
-```
-index.php          # Home page (requires login)
-login.php          # Login
-logout.php         # Logout
-clientes.php       # Client CRUD
-pets.php           # Pet CRUD
-agendamentos.php   # Appointment CRUD
-dashboard.php      # View of today's appointments
-db/
- ├─ conexao.php    # MySQL connection
- └─ criar_tabelas.sql # Database creation script
-helpers/           # Authentication, CSRF and flash helpers
-scripts/           # Utilities for setup and tests
-```
+``
 
-Requirements
+``````
 
-- PHP 7.4+ with `mysqli` extension enabled
-- MySQL or MariaDB accessible
+Quick Start
 
-How to Run Locally
+Prerequisites
+PHP 7.4+ with mysqli extension
 
-1. Configure your environment variables (DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE) or use default credentials (root without password).
+MySQL/MariaDB database
 
-2. Import the database using `db/criar_tabelas.sql` (or run the helper script):
+XAMPP, WAMP, or similar environment
 
-```powershell
+Installation
+Clone or download the project to your web server directory
+
+cd htdocs/
+git clone <repository-url> pet-shop
+
+
+Set up the database
+
+# Method 1: Using PHP script
 php scripts/create_db.php
-# or
-.\scripts\setup-dev.ps1
-```
 
-3. Start the built-in PHP server:
+# Method 2: Manual SQL import
+mysql -u root -p < db/criar_tabelas.sql
 
-```powershell
-php -S 127.0.0.1:8080
-```
+Configure database connection (if needed)
 
-4. Open in your browser:
+Edit db/conexao.php with your database credentials
 
-http://127.0.0.1:8080/login.php
+Default expects: host=localhost, user=root, password='', database=pet_shop
 
-Example credentials (created by the SQL script):
+Start development server
 
-- User: `admin`
-- Password: `admin123`
+php -S localhost:8080
 
-If login fails, reset the admin password:
+Access the application
 
-```powershell
-php scripts/reset_admin_password.php admin123
-```
+http://localhost:8080/login.php
 
-Quick Tests
+Default Login Credentials
+Username: admin
 
-Run the smoke test script which performs basic CRUD operations:
+Password: admin123
 
-```powershell
+ Database Schema
+The system uses 4 main tables:
+
+usuarios - User accounts for system access
+
+clientes - Client information (name, email, phone, address)
+
+pets - Pet records linked to clients (name, species, breed, birth date)
+
+agendamentos - Appointments with date, time, service type, and pet association
+
+Core Functionalities
+Client Management
+Add new clients with contact information
+
+View and search existing clients
+
+Update client details
+
+Remove client records
+
+Pet Management
+Register pets under client accounts
+
+Track species, breed, and age
+
+Maintain pet medical history context
+
+Appointment System
+Schedule appointments with specific date/time
+
+Categorize by service type (consultation, grooming, vaccination, etc.)
+
+Prevent scheduling conflicts
+
+View daily schedule on dashboard
+
+Security Features
+Password hashing using password_hash()
+
+Prepared statements to prevent SQL injection
+
+CSRF tokens for form protection
+
+Output escaping with htmlspecialchars()
+
+Session-based authentication
+
+Testing
+Run the smoke test suite to verify functionality:
+
 php scripts/run_smoke_suite.php
-```
 
-Setup helpers are available in `scripts/setup-dev.ps1`.
+Reset admin password if needed:
 
-Notes
+php scripts/reset_admin_password.php newpassword
 
-- The frontend is intentionally simple and focused on demonstration.
-- The project prioritizes solid backend practices, security and database integration.
-- Do not commit real credentials; use `.env.example` as a reference.
+Development
+For Windows development environment setup:
 
-If you want, I can:
+🔒 Security Notes
+Change default admin password after first login
 
-- Add CI badges and screenshots to the README.
-- Convert the project to use SQLite to avoid a MySQL dependency.
+Use environment variables for production database credentials
 
-Thanks for using the project! If you want the README adjusted with more details (endpoints, table schemas or screenshots), tell me what to add and I will update it.
+Ensure proper file permissions on production servers
+
+Regular updates recommended for PHP and MySQL components
+
+License
+MIT License - feel free to use for personal and commercial projects.
+
+
+    
