@@ -1,4 +1,5 @@
-Agendamento PetShop
+## Pet Shop Scheduling
+
 
 System for scheduling appointments for a Pet Shop / veterinary clinic, developed in plain PHP with MySQL. Designed to streamline daily operations and improve client service.
 
