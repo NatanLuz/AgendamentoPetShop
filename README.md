@@ -3,6 +3,20 @@
 
 System for scheduling appointments for a Pet Shop / veterinary clinic, developed in plain PHP with MySQL. Designed to streamline daily operations and improve client service.
 
+
+
+### Environment & Tools
+[![XAMPP](https://img.shields.io/badge/XAMPP-FB7A24?style=flat&logo=xampp&logoColor=white)](https://www.apachefriends.org/)
+[![phpMyAdmin](https://img.shields.io/badge/phpMyAdmin-6C78AF?style=flat&logo=phpmyadmin&logoColor=white)](https://www.phpmyadmin.net/)
+
+### Project Status
+![Project](https://img.shields.io/badge/Project-Stable-brightgreen)
+![PHP Version](https://img.shields.io/badge/PHP-7.4+-777BB4)
+
+
+
+
+
 Functionalities
 
 - Basic authentication (login/logout)
