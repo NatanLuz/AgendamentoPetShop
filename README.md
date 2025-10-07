@@ -1,146 +1,90 @@
-# Agendamento PetShop
+Agendamento PetShop
 
-Este é um projeto de exemplo em PHP puro (sem frameworks) com MySQL para demonstrar um sistema simples de agendamento para PetShop / clínica veterinária.
+System for scheduling appointments for a Pet Shop / veterinary clinic, developed in plain PHP with MySQL. Designed to streamline daily operations and improve client service.
 
-Funcionalidades principais
+Functionalities
 
-- Autenticação básica (login/logout)
-- CRUD de clientes
-- CRUD de pets (cada pet vinculado a um cliente)
-- CRUD de agendamentos (data, horário, tipo de serviço)
-- Dashboard que mostra os agendamentos do dia
-- Proteções básicas: prepared statements (mysqli), CSRF tokens e escape de saída (htmlspecialchars)
+- Basic authentication (login/logout)
+- Client CRUD
+- Pet CRUD (each pet is linked to a client)
+- Appointment CRUD (date, time, service type)
+- Daily dashboard showing today's appointments
+- Security: prepared statements, CSRF tokens, output escaping (htmlspecialchars)
 
-Estrutura do projeto
+Project Structure
 
-- `index.php` — página inicial (requer login)
-- `login.php`, `logout.php` — autenticação
-- `clientes.php`, `pets.php`, `agendamentos.php` — interfaces CRUD
-- `dashboard.php` — agendamentos do dia
-- `db/conexao.php` — conexão com MySQL (usa variáveis de ambiente: DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_DATABASE)
-- `db/criar_tabelas.sql` — script para criar o schema e um usuário `admin` de exemplo
-- `helpers/` — helpers para autenticação, CSRF e flash messages
-- `scripts/` — utilitários: `setup-dev.ps1`, `run_smoke_suite.php`, `create_db.php`, `reset_admin_password.php`
-
-Requisitos
-
-- PHP 7.4+ com extensão `mysqli` habilitada
-- MySQL (ou MariaDB) acessível
-- (opcional) XAMPP/WAMP para quem preferir instalar via pacote
-
-Como executar localmente (opção rápida — PHP embutido + MySQL local)
-
-1. Abra PowerShell e entre na pasta do projeto:
-
-```powershell
-cd 'C:\Users\User\Desktop\AgendamentoPetShop\agendamento-petshop'
+```
+index.php          # Home page (requires login)
+login.php          # Login
+logout.php         # Logout
+clientes.php       # Client CRUD
+pets.php           # Pet CRUD
+agendamentos.php   # Appointment CRUD
+dashboard.php      # View of today's appointments
+db/
+ ├─ conexao.php    # MySQL connection
+ └─ criar_tabelas.sql # Database creation script
+helpers/           # Authentication, CSRF and flash helpers
+scripts/           # Utilities for setup and tests
 ```
 
-2. Crie o banco e as tabelas (script incluído):
+Requirements
+
+- PHP 7.4+ with `mysqli` extension enabled
+- MySQL or MariaDB accessible
+
+How to Run Locally
+
+1. Configure your environment variables (DB_HOST, DB_USER, DB_PASSWORD, DB_DATABASE) or use default credentials (root without password).
+
+2. Import the database using `db/criar_tabelas.sql` (or run the helper script):
 
 ```powershell
 php scripts/create_db.php
-```
-
-Esse script tenta conectar ao MySQL em `127.0.0.1:3306` usando as variáveis de ambiente (ou `root` sem senha por padrão) e importa `db/criar_tabelas.sql`.
-
-Se preferir usar o PowerShell helper incluído (cria usuário `dev` e `.env`):
-
-```powershell
+# or
 .\scripts\setup-dev.ps1
 ```
 
-3. Inicie o servidor PHP embutido:
+3. Start the built-in PHP server:
 
 ```powershell
 php -S 127.0.0.1:8080
 ```
 
-4. Acesse no navegador:
+4. Open in your browser:
 
 http://127.0.0.1:8080/login.php
 
-Credenciais de exemplo (criadas pelo script SQL):
+Example credentials (created by the SQL script):
 
-- Usuário: `admin`
-- Senha: `admin123`
+- User: `admin`
+- Password: `admin123`
 
-Se o login não funcionar, use `scripts/reset_admin_password.php` para redefinir a senha do admin:
+If login fails, reset the admin password:
 
 ```powershell
 php scripts/reset_admin_password.php admin123
 ```
 
-Testes rápidos (smoke tests)
+Quick Tests
 
-Execute o runner simples que faz inserts/selects/deletes básicos:
+Run the smoke test script which performs basic CRUD operations:
 
 ```powershell
 php scripts/run_smoke_suite.php
 ```
 
-Publicando no GitHub
+Setup helpers are available in `scripts/setup-dev.ps1`.
 
-1. Inicialize git se ainda não estiver versionado:
+Notes
 
-```powershell
-git init
-git add .
-git commit -m "Initial commit - Agendamento PetShop"
-```
+- The frontend is intentionally simple and focused on demonstration.
+- The project prioritizes solid backend practices, security and database integration.
+- Do not commit real credentials; use `.env.example` as a reference.
 
-2. Crie um repositório no GitHub e empurre:
+If you want, I can:
 
-```powershell
-git remote add origin https://github.com/SEU_USUARIO/SEU_REPO.git
-git branch -M main
-git push -u origin main
-```
+- Add CI badges and screenshots to the README.
+- Convert the project to use SQLite to avoid a MySQL dependency.
 
-3. (Opcional) Configure secrets no GitHub para permitir que o workflow execute os smoke tests no CI:
-
-- Vá em Settings → Secrets → Actions e adicione `DB_HOST`, `DB_PORT`, `DB_DATABASE`, `DB_USER`, `DB_PASSWORD`.
-
-Arquivos úteis no repositório
-
-- `.env.example` — exemplo de variáveis de ambiente
-- `.gitignore` — arquivos a ignorar
-- `.github/workflows/php.yml` — workflow que faz lint de PHP e opcionalmente executa smoke tests quando os secrets estiverem configurados
-
-Segurança e notas finais
-
-- Não comite credenciais reais (arquivo `.env` não deve ser versionado).
-- Em produção, use conexões TLS, usuários com permissões limitadas e políticas de senha seguras.
-
-Se quiser, eu posso:
-
-- Gerar badges (CI, licença) e melhorar o README com screenshots.
-- Converter o projeto para usar SQLite (para não depender de MySQL) — útil se você quiser distribuir só com um arquivo.
-
-Obrigado por usar o projeto! Se quiser que eu ajuste o README com mais detalhes (ex.: endpoints, esquema das tabelas ou screenshots), diga o que adicionar e eu atualizo.
-
-Como publicar no GitHub
-
-1. Inicialize o repositório local (se ainda não faz parte de um git):
-
-```powershell
-git init
-git add .
-git commit -m "Initial commit - Agendamento PetShop"
-```
-
-2. Crie um repositório no GitHub (via site) e adicione o remoto, por exemplo:
-
-```powershell
-git remote add origin https://github.com/SEU_USUARIO/SEU_REPO.git
-git branch -M main
-git push -u origin main
-```
-
-3. (Opcional) Configure secrets no GitHub (Settings → Secrets) se quiser que o workflow execute os smoke tests na CI:
-
-   - DB_HOST, DB_PORT, DB_DATABASE, DB_USER, DB_PASSWORD
-
-4. Não comite o arquivo `.env` com credenciais reais; use `.env.example` como referência.
-
-Pronto — após o push, o workflow definido em `.github/workflows/php.yml` fará lint dos arquivos PHP e (se você configurar os secrets) tentará executar o script de smoke tests.
+Thanks for using the project! If you want the README adjusted with more details (endpoints, table schemas or screenshots), tell me what to add and I will update it.
