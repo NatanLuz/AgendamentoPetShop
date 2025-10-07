@@ -1,11 +1,12 @@
 Pet Shop Scheduling System
 A comprehensive appointment scheduling system for pet shops and veterinary clinics built with plain PHP and MySQL. This system streamlines daily operations and enhances client service management.
 
-https://img.shields.io/badge/PHP-7.4+-777BB4?style=for-the-badge&logo=php&logoColor=white
+[![PHP7](https://img.shields.io/badge/PHP-7.4+-777BB4?style=for-the-badge&logo=php&logoColor=white)]()
+[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)]()
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)]()
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)]()
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white
-
-https://img.shields.io/badge/Project-Stable-brightgreen?style=for-the-badge
 
 ##  Features
 
