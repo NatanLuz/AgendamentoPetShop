@@ -12,14 +12,13 @@ A comprehensive appointment scheduling system for pet shops and veterinary clini
 ## Project Demonstration
 
 <p align="center">
-<img src="https://i.postimg.cc/3436bkXQ/Projetophp1.png" width="45%">
-<img src="https://i.postimg.cc/2bCJX1Q6/Projetophp2.png" width="45%"><br>
-<img src="https://i.postimg.cc/7GqcQ53h/Projetophp3.png" width="45%">
-<img src="https://i.postimg.cc/62zSsBcN/Projetophp4.png" width="45%"><br>
-<img src="https://i.postimg.cc/Hc3KGTzm/Projetophp5.png" width="45%">
-<img src="https://i.postimg.cc/vgXjRGhQ/Projetophp6.png" width="45%">
+  <img src="https://github.com/NatanLuz/AgendamentoPetShop/blob/main/assets/Projetophp1.PNG?raw=true" width="45%">
+  <img src="https://github.com/NatanLuz/AgendamentoPetShop/blob/main/assets/Projetophp2.PNG?raw=true" width="45%"><br>
+  <img src="https://github.com/NatanLuz/AgendamentoPetShop/blob/main/assets/Projetophp3.PNG?raw=true" width="45%">
+  <img src="https://github.com/NatanLuz/AgendamentoPetShop/blob/main/assets/Projetophp4.PNG?raw=true" width="45%"><br>
+  <img src="https://github.com/NatanLuz/AgendamentoPetShop/blob/main/assets/Projetophp5.PNG?raw=true" width="45%">
+  <img src="https://github.com/NatanLuz/AgendamentoPetShop/blob/main/assets/Projetophp6.PNG?raw=true" width="45%">
 </p>
-
 ##  Features
 
 Secure Authentication System - Login/logout with session management
