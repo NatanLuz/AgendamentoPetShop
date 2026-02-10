@@ -1,15 +1,12 @@
-## Pet Shop Scheduling System
+ Sistema de Agendamento para Pet Shop 1 VERSÃO
 
+Sistema completo de agendamento para pet shops e clínicas veterinárias desenvolvido em PHP puro e MySQL, focado em organização operacional, controle de clientes e gestão eficiente de atendimentos.
 
-A comprehensive appointment scheduling system for pet shops and veterinary clinics built with plain PHP and MySQL. This system streamlines daily operations and enhances client service management.
+Este projeto simula um sistema real utilizado por estabelecimentos do setor pet, demonstrando boas práticas de desenvolvimento backend, segurança web e modelagem de banco de dados relacional.
 
-[![PHP7](https://img.shields.io/badge/PHP-7.4+-777BB4?style=for-the-badge&logo=php&logoColor=white)]()
-[![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)]()
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)]()
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)]()
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+---
 
-## Project Demonstration
+🚀 Demonstração do Sistema
 
 <p align="center">
   <img src="https://github.com/NatanLuz/AgendamentoPetShop/blob/main/assets/Projetophp1.PNG?raw=true" width="45%">
@@ -19,161 +16,228 @@ A comprehensive appointment scheduling system for pet shops and veterinary clini
   <img src="https://github.com/NatanLuz/AgendamentoPetShop/blob/main/assets/Projetophp5.PNG?raw=true" width="45%">
   <img src="https://github.com/NatanLuz/AgendamentoPetShop/blob/main/assets/Projetophp6.PNG?raw=true" width="45%">
 </p>
-##  Features
 
-Secure Authentication System - Login/logout with session management
+---
 
-Complete Client Management - CRUD operations for client records
+📌 Problema que o projeto resolve
 
-Pet Management - Track pets with client associations
+Pet shops e clínicas veterinárias frequentemente enfrentam dificuldades na organização de atendimentos, controle de clientes e gerenciamento de agenda.
 
-Appointment Scheduling - Book, view, and manage appointments with service types
+Este sistema foi desenvolvido para:
 
-Daily Dashboard - Overview of today's appointments at a glance
+- Centralizar agendamentos
+- Organizar dados de clientes e pets
+- Evitar conflitos de horários
+- Facilitar a visualização dos atendimentos diários
+- Melhorar o fluxo operacional do estabelecimento
 
-Security First - Prepared statements, CSRF protection, and output escaping
+---
 
-Project Structure
-````
-pet-shop-scheduling/
-├── index.php              # Home dashboard (requires login)
-├── login.php              # User authentication
-├── logout.php             # Session termination
-├── clientes.php           # Client management
-├── pets.php               # Pet management
-├── agendamentos.php       # Appointment scheduling
-├── dashboard.php          # Today's appointments view
+✨ Funcionalidades
+
+🔐 Autenticação Segura
+
+- Login e logout com controle de sessão
+- Proteção contra acessos não autorizados
+
+👥 Gestão de Clientes
+
+- Cadastro completo de clientes
+- Consulta e busca de registros
+- Atualização de dados
+- Remoção de clientes
+
+🐶 Gestão de Pets
+
+- Cadastro de pets vinculados aos clientes
+- Registro de espécie, raça e idade
+- Organização do histórico dos animais
+
+📅 Sistema de Agendamentos
+
+- Criação e gerenciamento de horários
+- Associação do atendimento ao pet
+- Classificação por tipo de serviço
+- Prevenção de conflitos de horários
+
+📊 Dashboard Diário
+
+- Visualização rápida dos atendimentos do dia
+- Monitoramento operacional em tempo real
+
+---
+
+🛠️ Tecnologias Utilizadas
+
+**Backend**
+
+- PHP 7.4+
+- MySQL / MariaDB
+- mysqli
+
+**Frontend**
+
+- HTML5
+- CSS3
+- JavaScript
+
+**Segurança**
+
+- Prepared Statements
+- CSRF Tokens
+- Escapamento de saída
+- Hash seguro de senhas
+
+---
+
+🧱 Estrutura do Projeto
+
+```bash
+AgendamentoPetShop/
+├── index.php
+├── login.php
+├── logout.php
+├── clientes.php
+├── pets.php
+├── agendamentos.php
+├── dashboard.php
+│
 ├── db/
-│   ├── conexao.php        # Database connection handler
-│   └── criar_tabelas.sql  # Database schema
+│   ├── conexao.php
+│   └── criar_tabelas.sql
+│
 ├── helpers/
-│   ├── auth.php           # Authentication utilities
-│   ├── csrf.php           # CSRF protection
-│   └── flash.php          # Flash message system
+│   ├── auth.php
+│   ├── csrf.php
+│   └── flash.php
+│
 └── scripts/
-    ├── create_db.php      # Database setup utility
+    ├── create_db.php
     ├── reset_admin_password.php
     ├── run_smoke_suite.php
     └── setup-dev.ps1
+```
 
-``
+---
 
-``````
+⚙️ Como Executar o Projeto
 
-Quick Start
+📋 Pré-requisitos
 
-Prerequisites
-PHP 7.4+ with mysqli extension
+- PHP 7.4 ou superior
+- MySQL ou MariaDB
+- XAMPP, WAMP ou ambiente similar
 
-MySQL/MariaDB database
+📥 Clonar o Repositório
 
-XAMPP, WAMP, or similar environment
+```bash
+git clone https://github.com/NatanLuz/AgendamentoPetShop.git
+cd AgendamentoPetShop
+```
 
-Installation
-Clone or download the project to your web server directory
+🗄️ Criar o Banco de Dados
 
-cd htdocs/
-git clone <repository-url> pet-shop
+**Método automático**
 
-
-Set up the database
-
-# Method 1: Using PHP script
+```bash
 php scripts/create_db.php
+```
 
-# Method 2: Manual SQL import
+**Método manual**
+
+```bash
 mysql -u root -p < db/criar_tabelas.sql
+```
 
-Configure database connection (if needed)
+▶️ Executar o Servidor Local
 
-Edit db/conexao.php with your database credentials
-
-Default expects: host=localhost, user=root, password='', database=pet_shop
-
-Start development server
-
+```bash
 php -S localhost:8080
+```
 
-Access the application
+🌐 Acessar o Sistema
 
+Abra no navegador:
+
+```text
 http://localhost:8080/login.php
+```
 
-Default Login Credentials
-Username: admin
+🔑 Credenciais padrão
 
-Password: admin123
+Usuário:
 
- Database Schema
-The system uses 4 main tables:
+```text
+admin
+```
 
-usuarios - User accounts for system access
+Senha:
 
-clientes - Client information (name, email, phone, address)
+```text
+admin123
+```
 
-pets - Pet records linked to clients (name, species, breed, birth date)
+⚠️ Recomenda-se alterar a senha após o primeiro acesso.
 
-agendamentos - Appointments with date, time, service type, and pet association
+---
 
-Core Functionalities
-Client Management
-Add new clients with contact information
+🗃️ Estrutura do Banco de Dados
 
-View and search existing clients
+O sistema utiliza quatro tabelas principais:
 
-Update client details
+**usuarios**  
+Responsável pelo controle de acesso ao sistema.
 
-Remove client records
+**clientes**  
+Armazena informações dos clientes.
 
-Pet Management
-Register pets under client accounts
+**pets**  
+Registro dos animais vinculados aos clientes.
 
-Track species, breed, and age
+**agendamentos**  
+Controle dos atendimentos agendados.
 
-Maintain pet medical history context
+---
 
-Appointment System
-Schedule appointments with specific date/time
+🔒 Recursos de Segurança
 
-Categorize by service type (consultation, grooming, vaccination, etc.)
+- Hash seguro de senhas com `password_hash()`
+- Proteção contra SQL Injection com Prepared Statements
+- Proteção CSRF em formulários
+- Escapamento de saída com `htmlspecialchars()`
+- Autenticação baseada em sessão
 
-Prevent scheduling conflicts
+---
 
-View daily schedule on dashboard
+🧪 Testes
 
-Security Features
-Password hashing using password_hash()
+Executar testes básicos do sistema:
 
-Prepared statements to prevent SQL injection
-
-CSRF tokens for form protection
-
-Output escaping with htmlspecialchars()
-
-Session-based authentication
-
-Testing
-Run the smoke test suite to verify functionality:
-
+```bash
 php scripts/run_smoke_suite.php
+```
 
-Reset admin password if needed:
+🔧 Resetar Senha do Administrador
 
-php scripts/reset_admin_password.php newpassword
+```bash
+php scripts/reset_admin_password.php novasenha
+```
 
-Development
-For Windows development environment setup:
+---
 
-🔒 Security Notes
-Change default admin password after first login
+📚 Aprendizados Técnicos
 
-Use environment variables for production database credentials
+Durante o desenvolvimento deste projeto foram aplicados conceitos importantes como:
 
-Ensure proper file permissions on production servers
+- Estruturação de aplicações web em PHP puro
+- Modelagem de banco de dados relacional
+- Implementação de autenticação segura
+- Proteção contra vulnerabilidades comuns
+- Organização modular de código
+- Desenvolvimento de CRUD completo
 
-Regular updates recommended for PHP and MySQL components
+---
 
-License
-MIT License - feel free to use for personal and commercial projects.
+📄 Licença
 
-
-    
+Este projeto está sob licença MIT.  
