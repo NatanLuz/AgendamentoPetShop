@@ -1,96 +1,43 @@
- Sistema de Agendamento para Pet Shop 1 VERSÃO
+# Sistema de Agendamento para Pet Shop (v1)
 
-Sistema completo de agendamento para pet shops e clínicas veterinárias desenvolvido em PHP puro e MySQL, focado em organização operacional, controle de clientes e gestão eficiente de atendimentos.
-
-Este projeto simula um sistema real utilizado por estabelecimentos do setor pet, demonstrando boas práticas de desenvolvimento backend, segurança web e modelagem de banco de dados relacional.
+Sistema web de agendamento desenvolvido em PHP e MySQL para pet shops e clínicas veterinárias, com foco em organização operacional, controle de clientes e gestão eficiente de atendimentos.
 
 ---
 
-🚀 Demonstração do Sistema
+## 🎯 Proposta de Valor
 
-<p align="center">
-  <img src="https://github.com/NatanLuz/AgendamentoPetShop/blob/main/assets/Projetophp1.PNG?raw=true" width="45%">
-  <img src="https://github.com/NatanLuz/AgendamentoPetShop/blob/main/assets/Projetophp2.PNG?raw=true" width="45%"><br>
-  <img src="https://github.com/NatanLuz/AgendamentoPetShop/blob/main/assets/Projetophp3.PNG?raw=true" width="45%">
-  <img src="https://github.com/NatanLuz/AgendamentoPetShop/blob/main/assets/Projetophp4.PNG?raw=true" width="45%"><br>
-  <img src="https://github.com/NatanLuz/AgendamentoPetShop/blob/main/assets/Projetophp5.PNG?raw=true" width="45%">
-  <img src="https://github.com/NatanLuz/AgendamentoPetShop/blob/main/assets/Projetophp6.PNG?raw=true" width="45%">
-</p>
+Centralizar e estruturar o fluxo de atendimentos em estabelecimentos do setor pet, reduzindo conflitos de agenda e aumentando a previsibilidade operacional.
 
----
+**Benefícios principais:**
 
-📌 Problema que o projeto resolve
-
-Pet shops e clínicas veterinárias frequentemente enfrentam dificuldades na organização de atendimentos, controle de clientes e gerenciamento de agenda.
-
-Este sistema foi desenvolvido para:
-
-- Centralizar agendamentos
-- Organizar dados de clientes e pets
-- Evitar conflitos de horários
-- Facilitar a visualização dos atendimentos diários
-- Melhorar o fluxo operacional do estabelecimento
+* Organização centralizada dos agendamentos
+* Redução de conflitos de horários
+* Controle estruturado de clientes e pets
+* Melhor visibilidade da rotina operacional
 
 ---
 
-✨ Funcionalidades
+## ⚙️ Funcionalidades
 
-🔐 Autenticação Segura
-
-- Login e logout com controle de sessão
-- Proteção contra acessos não autorizados
-
-👥 Gestão de Clientes
-
-- Cadastro completo de clientes
-- Consulta e busca de registros
-- Atualização de dados
-- Remoção de clientes
-
-🐶 Gestão de Pets
-
-- Cadastro de pets vinculados aos clientes
-- Registro de espécie, raça e idade
-- Organização do histórico dos animais
-
-📅 Sistema de Agendamentos
-
-- Criação e gerenciamento de horários
-- Associação do atendimento ao pet
-- Classificação por tipo de serviço
-- Prevenção de conflitos de horários
-
-📊 Dashboard Diário
-
-- Visualização rápida dos atendimentos do dia
-- Monitoramento operacional em tempo real
+* Autenticação de usuários com controle de sessão
+* CRUD completo de clientes
+* Cadastro e gestão de pets vinculados aos clientes
+* Agendamento de atendimentos com associação de serviços
+* Dashboard com visão diária de atendimentos
+* Prevenção de conflitos de horários
 
 ---
 
-🛠️ Tecnologias Utilizadas
+## 🏗️ Arquitetura / Estrutura
 
-**Backend**
+Estrutura modular com separação clara de responsabilidades:
 
-- PHP 7.4+
-- MySQL / MariaDB
-- mysqli
+* **Aplicação** → rotas e fluxo principal
+* **Banco de dados** → conexão e scripts SQL
+* **Helpers** → autenticação, CSRF e utilidades
+* **Scripts** → automação e suporte ao ambiente
 
-**Frontend**
-
-- HTML5
-- CSS3
-- JavaScript
-
-**Segurança**
-
-- Prepared Statements
-- CSRF Tokens
-- Escapamento de saída
-- Hash seguro de senhas
-
----
-
-🧱 Estrutura do Projeto
+**Estrutura de diretórios:**
 
 ```bash
 AgendamentoPetShop/
@@ -120,124 +67,95 @@ AgendamentoPetShop/
 
 ---
 
-⚙️ Como Executar o Projeto
+## 🔐 Segurança
 
-📋 Pré-requisitos
+* Hash seguro de senhas com `password_hash()`
+* Prepared statements com `mysqli` para mitigação de SQL Injection
+* Proteção CSRF em formulários
+* Escapamento de saída com `htmlspecialchars()`
+* Controle de sessão para autenticação
 
-- PHP 7.4 ou superior
-- MySQL ou MariaDB
-- XAMPP, WAMP ou ambiente similar
+---
 
-📥 Clonar o Repositório
+## 🧰 Stack Tecnológica
+
+* PHP 7.4+
+* MySQL / MariaDB
+* mysqli
+* HTML5 semântico
+* CSS3
+* JavaScript
+
+---
+
+## 🚀 Instalação
+
+### Pré-requisitos
+
+* PHP 7.4+
+* MySQL ou MariaDB
+* Ambiente local (XAMPP, WAMP ou similar)
+
+### Passos
+
+1. Clonar o repositório
+2. Criar o banco de dados
+3. Executar o script SQL
+4. Configurar a conexão com o banco
+5. Iniciar o servidor local
+
+### Execução rápida
 
 ```bash
 git clone https://github.com/NatanLuz/AgendamentoPetShop.git
 cd AgendamentoPetShop
-```
 
-🗄️ Criar o Banco de Dados
-
-**Método automático**
-
-```bash
 php scripts/create_db.php
-```
-
-**Método manual**
-
-```bash
-mysql -u root -p < db/criar_tabelas.sql
-```
-
-▶️ Executar o Servidor Local
-
-```bash
 php -S localhost:8080
 ```
 
-🌐 Acessar o Sistema
+Acesse no navegador:
 
-Abra no navegador:
-
-```text
+```
 http://localhost:8080/login.php
 ```
 
-🔑 Credenciais padrão
+**Credenciais padrão:**
 
-Usuário:
+* Usuário: `admin`
+* Senha: `admin123`
 
-```text
-admin
-```
-
-Senha:
-
-```text
-admin123
-```
-
-⚠️ Recomenda-se alterar a senha após o primeiro acesso.
+> Recomenda-se alterar a senha após o primeiro acesso.
 
 ---
 
-🗃️ Estrutura do Banco de Dados
+## 🧪 Testes Rápidos
 
-O sistema utiliza quatro tabelas principais:
+**Checklist funcional:**
 
-**usuarios**  
-Responsável pelo controle de acesso ao sistema.
-
-**clientes**  
-Armazena informações dos clientes.
-
-**pets**  
-Registro dos animais vinculados aos clientes.
-
-**agendamentos**  
-Controle dos atendimentos agendados.
+1. Realizar login
+2. Cadastrar cliente
+3. Cadastrar pet
+4. Criar agendamento
+5. Visualizar no dashboard
+6. Validar bloqueio de acesso sem login
 
 ---
 
-🔒 Recursos de Segurança
+## 📸 Screenshots
 
-- Hash seguro de senhas com `password_hash()`
-- Proteção contra SQL Injection com Prepared Statements
-- Proteção CSRF em formulários
-- Escapamento de saída com `htmlspecialchars()`
-- Autenticação baseada em sessão
-
----
-
-🧪 Testes
-
-Executar testes básicos do sistema:
-
-```bash
-php scripts/run_smoke_suite.php
-```
-
-🔧 Resetar Senha do Administrador
-
-```bash
-php scripts/reset_admin_password.php novasenha
-```
+<p align="center">
+  <img src="assets/Projetophp1.PNG" width="45%">
+  <img src="assets/Projetophp2.PNG" width="45%"><br>
+  <img src="assets/Projetophp3.PNG" width="45%">
+  <img src="assets/Projetophp4.PNG" width="45%"><br>
+  <img src="assets/Projetophp5.PNG" width="45%">
+  <img src="assets/Projetophp6.PNG" width="45%">
+</p>
 
 ---
 
-📚 Aprendizados Técnicos
+## 👤 Autor
 
-Durante o desenvolvimento deste projeto foram aplicados conceitos importantes como:
-
-- Estruturação de aplicações web em PHP puro
-- Modelagem de banco de dados relacional
-- Implementação de autenticação segura
-- Proteção contra vulnerabilidades comuns
-- Organização modular de código
-- Desenvolvimento de CRUD completo
-
----
-
-📄 Licença
-
-Este projeto está sob licença MIT.  
+**Natan Da Luz**
+Desenvolvedor Backend focado em PHP
