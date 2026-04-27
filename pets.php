@@ -7,7 +7,8 @@ require_login();
 
 $clienteRows = $mysqli->query('SELECT id, nome FROM clientes');
 
-// Edit mode: ?edit=ID
+
+
 $editing = null;
 if (isset($_GET['edit'])) {
     $eid = (int)$_GET['edit'];
@@ -47,7 +48,7 @@ $rows = $mysqli->query('SELECT pets.*, clientes.nome as cliente_nome FROM pets J
 <select name="cliente_id" required>
 <option value="">Selecione</option>
 <?php
-        // reset pointer of clienteRows
+
         $clienteRows->data_seek(0);
         while($cl=$clienteRows->fetch_assoc()): ?>
 <option value="<?= (int)$cl['id'] ?>" <?= isset($editing['cliente_id']) && $editing['cliente_id'] == $cl['id'] ? 'selected' : '' ?>><?= htmlspecialchars($cl['nome']) ?></option>
