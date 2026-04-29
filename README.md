@@ -4,7 +4,8 @@ Sistema web de agendamento desenvolvido em PHP e MySQL para pet shops e clínica
 
 ---
 
-## 🎯 Proposta de Valor
+## 🎯 Proposta do Projeto|
+
 
 Centralizar e estruturar o fluxo de atendimentos em estabelecimentos do setor pet, reduzindo conflitos de agenda e aumentando a previsibilidade operacional.
 
@@ -67,7 +68,7 @@ AgendamentoPetShop/
 
 ---
 
-## 🔐 Segurança
+## 🔐 Segurança Aplicada neste projeto
 
 * Hash seguro de senhas com `password_hash()`
 * Prepared statements com `mysqli` para mitigação de SQL Injection
@@ -77,7 +78,7 @@ AgendamentoPetShop/
 
 ---
 
-## 🧰 Stack Tecnológica
+## 🧰 Stack
 
 * PHP 7.4+
 * MySQL / MariaDB
