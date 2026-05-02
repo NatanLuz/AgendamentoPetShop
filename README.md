@@ -1,11 +1,10 @@
-# Sistema de Agendamento para Pet Shop (v1)
+## Sistema de Agendamento para Pet Shop (v1)
 
 Sistema web de agendamento desenvolvido em PHP e MySQL para pet shops e clínicas veterinárias, com foco em organização operacional, controle de clientes e gestão eficiente de atendimentos.
 
 ---
 
-## 🎯 Proposta do Projeto|
-
+## 🎯 Proposta do Projeto
 
 Centralizar e estruturar o fluxo de atendimentos em estabelecimentos do setor pet, reduzindo conflitos de agenda e aumentando a previsibilidade operacional.
 
@@ -38,7 +37,7 @@ Estrutura modular com separação clara de responsabilidades:
 * **Helpers** → autenticação, CSRF e utilidades
 * **Scripts** → automação e suporte ao ambiente
 
-**Estrutura de diretórios:**
+**Estrutura de diretórios em pastas :**
 
 ```bash
 AgendamentoPetShop/
@@ -78,7 +77,7 @@ AgendamentoPetShop/
 
 ---
 
-## 🧰 Stack
+## 🧰 Stack do Projeto
 
 * PHP 7.4+
 * MySQL / MariaDB
