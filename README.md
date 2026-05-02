@@ -79,16 +79,16 @@ AgendamentoPetShop/
 
 ## 🧰 Stack do Projeto
 
-* PHP 7.4+
-* MySQL / MariaDB
-* mysqli
-* HTML5 semântico
-* CSS3
-* JavaScript
+* _PHP 7.4+_
+* _MySQL / MariaDB_
+* _mysqli_
+* _HTML5_
+* _CSS3_
+* _Javascript_
 
 ---
 
-## 🚀 Instalação
+## 🚀 Instalação Para Rodar o Projeto
 
 ### Pré-requisitos
 
@@ -96,7 +96,7 @@ AgendamentoPetShop/
 * MySQL ou MariaDB
 * Ambiente local (XAMPP, WAMP ou similar)
 
-### Passos
+## Passos
 
 1. Clonar o repositório
 2. Criar o banco de dados
@@ -104,7 +104,7 @@ AgendamentoPetShop/
 4. Configurar a conexão com o banco
 5. Iniciar o servidor local
 
-### Execução rápida
+## Execução rápida
 
 ```bash
 git clone https://github.com/NatanLuz/AgendamentoPetShop.git
@@ -114,13 +114,13 @@ php scripts/create_db.php
 php -S localhost:8080
 ```
 
-Acesse no navegador:
+## Acesse no navegador:
 
 ```
 http://localhost:8080/login.php
 ```
 
-**Credenciais padrão:**
+## **Credenciais padrão:**
 
 * Usuário: `admin`
 * Senha: `admin123`
@@ -142,7 +142,7 @@ http://localhost:8080/login.php
 
 ---
 
-## 📸 Screenshots
+## 📸 Screenshots Do Projeto
 
 <p align="center">
   <img src="assets/Projetophp1.PNG" width="45%">
