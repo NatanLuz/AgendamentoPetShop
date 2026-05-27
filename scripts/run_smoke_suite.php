@@ -1,5 +1,5 @@
 <?php
- //Smoke Runner simples para fluxos CRUD básicos
+ //Smoke Runner simples para fluxo de CRUD básico
 require __DIR__ . '/../db/conexao.php';
 
 function run($desc, $fn) {
