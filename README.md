@@ -4,7 +4,7 @@ Sistema web de agendamento desenvolvido em PHP e MySQL para PETSHOPS e CLÍNICAS
 
 ---
 
-## 🎯 Proposta do Projeto
+## 🎯 Objetivo do Projeto
 
 Centralizar e estruturar o fluxo de atendimentos em estabelecimentos do setor pet, reduzindo conflitos de agenda e aumentando a previsibilidade operacional.
 
