@@ -38,6 +38,6 @@ CREATE TABLE IF NOT EXISTS agendamentos (
   FOREIGN KEY (pet_id) REFERENCES pets(id) ON DELETE CASCADE
 );
 
--- Cria usuário admin de teste
+-- Cria o usuário admin que servirá de teste
 INSERT INTO usuarios (nome, username, senha) VALUES ('Admin','admin', '$2y$10$e0NRy7jJw1/0aY9Zl5V8cOqYc7aJp8cQKqN1o0nQxE.q1nYkVQyG6');
--- senha 'admin123' hash gerado com password_hash('admin123', PASSWORD_DEFAULT)
+-- senha 'admin123' hash gerado com password_hash('admin123', PASSWORD_DEFAULT) Apenas para teste local, nada hospedado
