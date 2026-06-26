@@ -11,8 +11,11 @@ Centralizar e estruturar o fluxo de atendimentos em estabelecimentos do setor pe
 **Benefícios principais:**
 
 * Organização centralizada dos agendamentos
+
 * Redução de conflitos de horários
+
 * Controle estruturado de clientes e pets
+
 * Melhor visibilidade da rotina operacional
 
 ---
@@ -33,8 +36,11 @@ Centralizar e estruturar o fluxo de atendimentos em estabelecimentos do setor pe
 Estrutura modular com separação clara de responsabilidades:
 
 * **Aplicação** → rotas e fluxo principal
+
 * **Banco de dados** → conexão e scripts SQL
+
 * **Helpers** → autenticação, CSRF e utilidades
+
 * **Scripts** → automação e suporte ao ambiente
 
 **Estrutura de diretórios em pastas :**
@@ -93,7 +99,9 @@ AgendamentoPetShop/
 ### Pré-requisitos
 
 * PHP 7.4+
+
 * MySQL ou MariaDB
+
 * Ambiente local (XAMPP, WAMP ou similar)
 
 ## Passos
@@ -125,7 +133,7 @@ http://localhost:8080/login.php
 * Usuário: `admin`
 * Senha: `admin123`
 
-> Recomenda-se alterar a senha após o primeiro acesso.
+> Recomenda-se alterar a senha após o primeiro acesso, pois é apenas um teste introdutório.
 
 ---
 
