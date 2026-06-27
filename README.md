@@ -1,4 +1,4 @@
-## Sistema de Agendamento para Pet Shop (1 Versão)
+## Sistema de Agendamento para PetShop (1 Versão)
 
 Sistema web de agendamento desenvolvido em PHP e MySQL para PETSHOPS e CLÍNICAS VETERINÁRIAS, com foco em organização operacional, controle de clientes e gestão eficiente de atendimentos.
 
