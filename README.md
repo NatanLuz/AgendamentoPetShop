@@ -1,4 +1,4 @@
-# Sistema de Agendamento para PetShop (Versão 1)
+# Sistema de Agendamento para PetShop (V1)
 
 ## 📖 Sobre o projeto
 
