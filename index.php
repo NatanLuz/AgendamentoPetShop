@@ -13,7 +13,7 @@ $user = current_user();
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header><h1>Agendamento PetShop</h1></header>
+<header><h1>Agendamento Pet Shop</h1></header>
 <main>
 <section>
 <h2>Bem Vindo, <?= htmlspecialchars($user['nome'] ?? 'Usuário') ?></h2>
