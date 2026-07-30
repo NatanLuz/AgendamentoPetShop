@@ -5,7 +5,6 @@ require 'helpers/flash.php';
 require 'helpers/csrf.php';
 require_login();
 
-// Edit mode: ?edit=ID
 $editing = null;
 if (isset($_GET['edit'])) {
         $eid = (int)$_GET['edit'];
