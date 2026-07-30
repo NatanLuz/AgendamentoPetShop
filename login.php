@@ -4,7 +4,7 @@ require 'helpers/auth.php';
 require 'helpers/flash.php';
 require 'helpers/csrf.php';
 
-// login form code
+// login form
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'] ?? '';
     $senha = $_POST['senha'] ?? '';
