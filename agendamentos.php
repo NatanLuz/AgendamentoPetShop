@@ -7,7 +7,6 @@ require_login();
 
 $petRows = $mysqli->query('SELECT id, nome FROM pets');
 
-// Edit mode: ?edit=ID
 $editing = null;
 if (isset($_GET['edit'])) {
     $eid = (int)$_GET['edit'];
