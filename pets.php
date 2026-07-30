@@ -7,8 +7,6 @@ require_login();
 
 $clienteRows = $mysqli->query('SELECT id, nome FROM clientes');
 
-
-
 $editing = null;
 if (isset($_GET['edit'])) {
     $eid = (int)$_GET['edit'];
